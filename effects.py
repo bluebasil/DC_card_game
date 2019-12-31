@@ -54,7 +54,7 @@ def attack(player,card,by_player = None,avoid_twise = False):
 		if result != None:
 			return result
 
-	# Looks for any avalable defence cards
+	# Looks for any avalable defense cards
 	assemble = []
 	for c in player.hand.contents:
 		if c.defence:
@@ -63,7 +63,7 @@ def attack(player,card,by_player = None,avoid_twise = False):
 		if c.defence:
 			assemble.append(c)
 
-	# If there are any defence cards, ask the defender if they would like to use one of them
+	# If there are any defense cards, ask the defender if they would like to use one of them
 	if len(assemble) > 0:
 		result = player.controler.may_defend(assemble,card,by_player)
 		if result[0] == option.OK:

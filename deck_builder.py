@@ -5,16 +5,17 @@ from base import deck as base_deck
 from fe import deck as fe_deck
 from crossover_1 import deck as c1_deck
 from crossover_2 import deck as c2_deck
+from hu import deck as hu_deck
 # For testing individual cards
 from base import cards as custom
 # I have just implimented the personas of HU for now.  They can be accessed if any_pick == True
-from hu import persona as hu_personas
+# from hu import persona as hu_personas
 from frames import card_frame
 import arcade
 import globe
 
 # As sets are chosen, they are moved from decks to choosen_sets
-decks = [base_deck.this_set,fe_deck.this_set,c1_deck.this_set,c2_deck.this_set]
+decks = [base_deck.this_set,fe_deck.this_set,hu_deck.this_set,c1_deck.this_set,c2_deck.this_set]
 choosen_sets = []
 #Specifies weather small set personas muct be picked when playing with small sets
 any_pick = False
@@ -65,7 +66,6 @@ def get_personas():
 	else:
 		# if not any_pick, combines large sets, small sets, and the HU personas
 		large_sets.extend(small_sets)
-		large_sets.extend(hu_personas.get_personas())
 	return large_sets
 
 # Assembles each players starting hand

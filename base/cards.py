@@ -141,7 +141,7 @@ class blue_beetle(card_frame.card):
 	vp = 2
 	cost = 6
 	ctype = cardtype.HERO
-	defence = True
+	defense = True
 	text = "+3 Power.  Defense: You may reveal this card from your hand to avoid an Attack. (It stays in your hand)"
 	image = "base/images/cards/Blue_Beetle.jpeg"
 	
@@ -158,7 +158,7 @@ class bulletproof(card_frame.card):
 	vp = 1
 	cost = 4
 	ctype = cardtype.SUPERPOWER
-	defence = True
+	defense = True
 	text = "+2 Power.  Defense: You may discard this card to avoid an Attack.  If you do, draw a card and you may destroy a card in your discard pile."
 	image = "base/images/cards/Bulletproof.jpeg"
 	
@@ -185,7 +185,7 @@ class the_cape_and_cowl(card_frame.card):
 	vp = 1
 	cost = 4
 	ctype = cardtype.EQUIPMENT
-	defence = True
+	defense = True
 	text = "+2 Power.  Defense: You may discard this card to avoid an Attack.  If you do, draw two cards."
 	image = "base/images/cards/The_Cape_and_Cowl.jpeg"
 	
@@ -270,10 +270,7 @@ class the_dark_knight(card_frame.card):
 	def trigger(self,ttype,data,player,active,immediate):
 		if globe.DEBUG:
 			print("test - DK",self.name,flush=True)
-		if trigger.test(immediate,\
-						trigger.GAIN_CARD, \
-						self.trigger, \
-						player,ttype) \
+		if trigger.test(immediate,trigger.GAIN_CARD,self.trigger,player,ttype) \
 				and data[0] == False \
 				and effects.ok_or_no(f"Would you like to put {data[1].name} into your hand?",player,data[1],ai_hint.ALWAYS):
 			if globe.DEBUG:
@@ -570,7 +567,7 @@ class lasso_of_truth(card_frame.card):
 	vp = 1
 	cost = 2
 	ctype = cardtype.EQUIPMENT
-	defence = True
+	defense = True
 	text = "+1 Power\nDefence:: You may discard this card to avoid an Attack.  If you do, draw a card."
 	image = "base/images/cards/Lasso_of_Truth.jpeg"
 	
@@ -909,7 +906,7 @@ class super_speed(card_frame.card):
 	vp = 1
 	cost = 3
 	ctype = cardtype.SUPERPOWER
-	defence = True
+	defense = True
 	text = "Draw a card.  Defense: You may discard this card to avoid an Attack.  If you do, draw two cards."
 	image = "base/images/cards/Super_Speed.jpeg"
 	

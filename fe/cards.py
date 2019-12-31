@@ -166,7 +166,7 @@ class commissioner_gordon(card_frame.card):
 	vp = 1
 	cost = 2
 	ctype = cardtype.HERO
-	defence = True
+	defense = True
 	text = "+1 Power.  Defense: You may discard this card to avoid an Attack.  If you do, gain 1 VP."
 	image = "fe/images/cards/Commissioner Gordon.jpg"
 	
@@ -209,7 +209,7 @@ class cosmic_staff(card_frame.card):
 	vp = 1
 	cost = 5
 	ctype = cardtype.EQUIPMENT
-	defence = True
+	defense = True
 	text = "+2 Power.  Defense: You may discard this card to avoid an Attack.  If you do, gain the bottom of the main deck."
 	image = "fe/images/cards/Cosmic Staff.jpg"
 	
@@ -559,7 +559,7 @@ class insanity(card_frame.card):
 	ctype = cardtype.SUPERPOWER
 	text = "If this is the first card you play this turn, each player passes a\ncard in his hand to the hand of the player on his left.\nDefense: You may discard this card to avoid an Attack. If you do,\nyou may put a card from your hand or discard pile into the\nattacker's hand."
 	image = "fe/images/cards/Insanity.jpg"
-	defence = True
+	defense = True
 	
 	def play_action(self,player):
 		if len(player.played.played_this_turn) == 0:
@@ -604,7 +604,7 @@ class invulnerable(card_frame.card):
 	ctype = cardtype.SUPERPOWER
 	text = "+1 Power\nDefense: When you are attacked, you may reveal this card\nfrom your hand. If you do, you may discard it or destroy a\nVulnerability in your hand or discard pile to avoid\nan Attack"
 	image = "fe/images/cards/Invulnerable.jpg"
-	defence = True
+	defense = True
 	
 	def play_action(self,player):
 		player.played.plus_power(1)
@@ -695,7 +695,7 @@ class man_bat(card_frame.card):
 	ctype = cardtype.VILLAIN
 	text = "+2 Power\nDefense: You may discard this card to avoid an Attack\nif you do, steal 1VP from the attacker."
 	image = "fe/images/cards/Man Bat.jpg"
-	defence = True
+	defense = True
 	
 	def play_action(self,player):
 		player.played.plus_power(2)
@@ -810,7 +810,7 @@ class power_armor(card_frame.card):
 	ctype = cardtype.EQUIPMENT
 	text = "+3 Power\nDefense: You may reveal this card from your hand to\navoid an Attack. If you do, you may destroy a card in\nyour hand or discard pile."
 	image = "fe/images/cards/Power Armor.jpg"
-	defence = True
+	defense = True
 	
 	def play_action(self,player):
 		player.played.plus_power(3)
@@ -967,7 +967,7 @@ class stargirl(card_frame.card):
 	ctype = cardtype.HERO
 	text = "+2 Power\nDefense: You may discard this card to avoid an Attack.  if you\ndo, draw a card and put a card with cost 1 or greater from the\ndestroyed pile on the bottom of the main deck."
 	image = "fe/images/cards/Star Girl.jpg"
-	defence = True
+	defense = True
 	
 	def play_action(self,player):
 		player.played.plus_power(2)

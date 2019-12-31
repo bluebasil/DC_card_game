@@ -316,7 +316,7 @@ class shado(card_frame.card):
 	vp = 1
 	cost = 4
 	ctype = cardtype.HERO
-	defence = True
+	defense = True
 	text = "+1 Power and draw a card\nDefence:: You may put this card under your Super Hero to\navoid an Attack. If you do, draw two cards and you may put\na card from your hand under your Super Hero."
 	image = "crossover_2/images/cards/Shado 4.jpg"
 	
@@ -626,7 +626,7 @@ class malcolm_merlyn(card_frame.card):
 	text = "+3 Power. Defense: You may reveal this card from your hand to avoid an Attack."
 	attack_text = "First Appearance - Attack: Each player reveals the top card\nof the main deck and puts it under his Super Hero. If it's not a\nHero, discard a random card."
 	image = "crossover_2/images/cards/Malcom Merlyn 12.jpg"
-	defence = True
+	defense = True
 
 	def play_action(self,player):
 		player.played.plus_power(3)

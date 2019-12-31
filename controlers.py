@@ -80,7 +80,7 @@ class controler:
 
 class human_view(controler):
 
-	def await(self,process):
+	def await_turn(self,process):
 		#print(globe.bus.display,flush=True)
 		#try:
 		print("Waiting for player input...",flush = True)
@@ -132,7 +132,7 @@ class human_view(controler):
 					#.click_action(self.player)
 					globe.bus.clear()
 
-		self.await(process)
+		self.await_turn(process)
 
 	def choose_persona(self,persona_list):
 		globe.bus.clear()
@@ -153,7 +153,7 @@ class human_view(controler):
 					return current.content
 
 
-		choosen = self.await(process)
+		choosen = self.await_turn(process)
 		return choosen
 
 	def may_defend(self, options, attacking_card, attacking_player = None):
@@ -181,7 +181,7 @@ class human_view(controler):
 					globe.bus.clear()
 					return (option.NO,-1)
 		
-		return self.await(process)
+		return self.await_turn(process)
 
 	def choose_one_of(self,instruction_text,player,cards,hint):
 		options = cards
@@ -203,7 +203,7 @@ class human_view(controler):
 
 
 		
-		return self.await(process)
+		return self.await_turn(process)
 		#base on hint
 		#return [0]
 
@@ -233,7 +233,7 @@ class human_view(controler):
 					globe.bus.clear()
 					return [option.NO]
 		
-		return self.await(process)
+		return self.await_turn(process)
 
 	def ok_or_no(self,instruction_text,player,card,hint):
 		options = [option.NO,option.OK]
@@ -252,7 +252,7 @@ class human_view(controler):
 					globe.bus.clear()
 					return [current.content]
 
-		return self.await(process)
+		return self.await_turn(process)
 
 
 	#No responce needed
@@ -273,7 +273,7 @@ class human_view(controler):
 					globe.bus.clear()
 					return [current.content]
 
-		return self.await(process)
+		return self.await_turn(process)
 
 
 	def choose_even_or_odd(self,instruction_text,player):
@@ -292,7 +292,7 @@ class human_view(controler):
 					globe.bus.clear()
 					return [current.content]
 
-		return self.await(process)
+		return self.await_turn(process)
 
 	def choose_a_player(self,instruction_text,player,options,hint = None):
 		globe.bus.clear()
@@ -307,7 +307,7 @@ class human_view(controler):
 					globe.bus.clear()
 					return options.index(current.content)
 
-		return self.await(process)
+		return self.await_turn(process)
 
 
 	def choose_however_many(self,instruction_text,player,cards,hint = None):
@@ -341,7 +341,7 @@ class human_view(controler):
 						globe.bus.clear()
 						return option.DONE
 			
-			result = self.await(process)
+			result = self.await_turn(process)
 			if result == option.DONE and not assemble_started:
 				return [option.NO]
 			elif result == option.DONE:

@@ -96,7 +96,7 @@ class girl_power(card_frame.card):
 	vp = 1
 	cost = 5
 	ctype = cardtype.SUPERPOWER
-	defence = True
+	defense = True
 	text = "+2 Power\nDefence:: You may reveal this card and discard\nit or a Punch to avoid an Attack. If you do,\ndraw a card."
 	image = "crossover_1/images/cards/Girl Power 5.jpg"
 	
@@ -124,7 +124,7 @@ class liberty_belle(card_frame.card):
 	vp = 1
 	cost = 3
 	ctype = cardtype.HERO
-	defence = True
+	defense = True
 	text = "+2 Power\nDefence:: You may discard this card to avoid an\nAttack. If you do, draw three cards and put two\ncards from your hand on top of your deck."
 	image = "crossover_1/images/cards/Liberty Belle 3.jpg"
 	

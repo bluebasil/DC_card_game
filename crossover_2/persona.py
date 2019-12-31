@@ -69,7 +69,7 @@ class john_diggle(persona_frame.persona):
 			if c.defence:
 				assemble.append(c)
 		if len(assemble) > 0:
-			instruction_text = "Would you like to put a defence from under your\nsuper hero, on top of your deck?"
+			instruction_text = "Would you like to put a defense from under your\nsuper hero, on top of your deck?"
 			result = effects.may_choose_one_of(instruction_text,player,assemble,ai_hint.BEST)
 			if result != None:
 				result.pop_self()

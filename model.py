@@ -686,6 +686,8 @@ class model:
 	#I do not belive this is used
 	#can set code here to be ran at the begining of each players turn
 	notify = None
+	#Check if game is still ongoing
+	game_ongoing = False
 	#Tracks whoes turn it is
 	whose_turn = 0
 	#All the avalable personas ensures that the players cannot choose duplicate
@@ -800,8 +802,13 @@ class model:
 		end_reason = "regular"
 		check_result = None
 		try:
+			#TODO: test alternate way to end game not based on supervillain stack
+			self.game_ongoing = True
 			#The game ends when the supervaillin stack is empty
 			while self.supervillain_stack.get_count() > 0:
+			#while self.game_ongoing:
+				#if self.supervillain_stack.get_count() == 0:
+				#	self.game_ongoing = False
 				#Tracks the number of turns
 				self.turn_number += 1
 				if self.notify != None:

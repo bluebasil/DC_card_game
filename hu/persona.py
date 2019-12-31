@@ -85,7 +85,7 @@ class booster_gold(persona_frame.persona):
 	image = "hu/images/personas/Booster Gold MC.jpg"
 	
 	def ai_overvalue(self,card):
-		if card.defence:
+		if card.defense:
 			return persona_frame.overvalue()
 		return 0
 
@@ -96,7 +96,7 @@ class booster_gold(persona_frame.persona):
 						trigger.PLAY, \
 						self.triggerDE, \
 						player,ttype,active) \
-				and data[0].defence:
+				and data[0].defense:
 			if globe.DEBUG:
 				print("active",self.name,flush=True)
 			player.played.plus_power(1)
